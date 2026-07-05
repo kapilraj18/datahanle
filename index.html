@@ -6,70 +6,124 @@
 <title>DataHanle</title>
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:#050816;
-color:white;
-text-align:center;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+background:#08121F;
+color:#F8FAFC;
 }
 
 .hero{
-padding:90px 20px;
+
+max-width:1000px;
+margin:auto;
+padding:110px 30px 90px;
+text-align:center;
+
 }
 
 h1{
-font-size:58px;
-margin:0;
+
+font-size:72px;
+font-weight:700;
+letter-spacing:-2px;
+
 }
 
 .tagline{
-font-size:24px;
-color:#7dd3fc;
-margin-top:15px;
+
+margin-top:18px;
+font-size:28px;
+font-weight:400;
+color:#6EC1FF;
+
 }
 
 .desc{
-max-width:750px;
-margin:30px auto;
-font-size:20px;
-line-height:1.7;
-color:#d6d6d6;
+
+margin:35px auto;
+max-width:780px;
+font-size:22px;
+line-height:1.8;
+color:#C7D2DA;
+
 }
 
-.btn{
+.button{
+
 display:inline-block;
-padding:15px 35px;
-background:#2563eb;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-weight:bold;
 margin-top:25px;
+padding:15px 34px;
+background:#2563EB;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:600;
+transition:.3s;
+
 }
 
-section{
-padding:70px 20px;
-max-width:1000px;
+.button:hover{
+
+background:#3B82F6;
+
+}
+
+.section{
+
+max-width:1100px;
 margin:auto;
-}
+padding:40px 30px;
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
 }
 
 .card{
-background:#111827;
-padding:25px;
-border-radius:12px;
+
+background:#111C2B;
+border-radius:16px;
+padding:28px;
+margin-bottom:24px;
+border:1px solid #1E2A3B;
+
+}
+
+.card h2{
+
+margin-bottom:15px;
+
+}
+
+.tags{
+
+margin-top:18px;
+
+}
+
+.tag{
+
+display:inline-block;
+background:#183C73;
+padding:8px 14px;
+border-radius:25px;
+margin:5px;
+font-size:14px;
+
 }
 
 footer{
-padding:40px;
-color:#888;
+
+text-align:center;
+padding:60px;
+color:#94A3B8;
+
 }
+
 </style>
 
 </head>
@@ -86,53 +140,55 @@ Observe. Understand. Decide.
 
 <div class="desc">
 
-Inspired by Hanle, India's first Dark Sky Reserve,
-DataHanle helps organizations bring clarity to enterprise
-data, AI and decision intelligence.
+Insights on enterprise data, analytics engineering,
+dimensional modeling, AI and decision intelligence.
 
 </div>
 
-<a class="btn" href="#">
-Thought Leadership Coming Soon
+<a class="button" href="#">
+Explore Articles
 </a>
 
 </div>
 
-<section>
-
-<h2>Focus Areas</h2>
-
-<div class="cards">
+<div class="section">
 
 <div class="card">
-<h3>AI Strategy</h3>
-<p>Building AI-first enterprises with strong foundations.</p>
+
+<h2>Latest Article</h2>
+
+<h3>Confirmed Dimensions Performance Study</h3>
+
+<p>
+
+An analysis of semantic model performance and optimization using confirmed dimensions.
+
+</p>
+
+<div class="tags">
+
+<span class="tag">Confirmed Dimensions</span>
+
+<span class="tag">Performance</span>
+
+<span class="tag">Rayfin</span>
+
+<span class="tag">Semantic Models</span>
+
+<span class="tag">Dimensional Modeling</span>
+
 </div>
 
-<div class="card">
-<h3>Analytics Engineering</h3>
-<p>Modern data platforms and semantic models.</p>
-</div>
-
-<div class="card">
-<h3>Data Modeling</h3>
-<p>Dimensional modeling for the AI era.</p>
-</div>
-
-<div class="card">
-<h3>Decision Intelligence</h3>
-<p>Turning data into business actions.</p>
 </div>
 
 </div>
-
-</section>
 
 <footer>
 
-© 2026 DataHanle • Inspired by Hanle Dark Sky Reserve
+© 2026 DataHanle
 
 </footer>
 
 </body>
+
 </html>

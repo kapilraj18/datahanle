@@ -1,3 +1,6 @@
+Here is the complete, production-ready code for your **articles.html** file. It includes the clean card-link structure where the entire block is clickable, elegant borders, subtle hover elevations, and your correct brand footprint.
+### Full Code: articles.html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,34 +10,56 @@
     <!-- Links to your main shared brand stylesheet -->
     <link rel="stylesheet" href="assets/styles.css">
     <style>
-        /* Minimal layout adjustments for the index list */
-        ul.article-list {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 2rem;
+        /* Container for the feed */
+        .article-feed {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
-        ul.article-list li {
-            margin-bottom: 1.75rem;
-            line-height: 1.6;
-        }
-        ul.article-list a {
-            font-size: 1.15rem;
-            font-weight: 600;
+
+        /* The Card Link Component */
+        .article-card {
+            display: block;
             text-decoration: none;
             color: #0f172a;
+            background: #ffffff;
+            border: 1px solid #e2e8f0; /* Soft border framework */
+            border-radius: 16px;        /* Smooth rounded corners */
+            padding: 1.75rem;          /* Generous internal spacing */
+            margin-bottom: 1.5rem;     /* Space between individual cards */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        ul.article-list a:hover {
-            color: #2563eb;
-            text-decoration: underline;
+
+        /* Interactive states when a reader hovers over a card */
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-color: #cbd5e1;
         }
-        .article-date {
+
+        /* Title style inside the card */
+        .article-card h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0 0 0.75rem 0;
+            line-height: 1.3;
+            color: #0f172a;
+        }
+
+        /* Muted summary text */
+        .article-card p {
+            font-size: 0.95rem;
+            color: #475569;
+            margin: 0 0 1.25rem 0;
+            line-height: 1.6;
+        }
+
+        /* Light grey date marker at the bottom */
+        .article-card .article-date {
             display: block;
             font-size: 0.85rem;
-            color: #64748b;
-            margin-top: 0.25rem;
-        }
-        section {
-            margin-bottom: 3rem;
+            color: #94a3b8;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -48,26 +73,24 @@
         <a href="point-of-view.html">A Point of View</a>
     </nav>
 
-    <!-- Main Content -->
-    <main>
+    <!-- Main Content Area -->
+    <main class="article-feed">
         <h1>Articles</h1>
-        <p style="color: #475569;">Perspectives on modern data infrastructure, semantic engineering, and enterprise AI orchestration.</p>
+        <p style="color: #64748b; margin-bottom: 2.5rem;">Perspectives on modern data infrastructure, semantic engineering, and enterprise AI orchestration.</p>
 
-        <section>
-            <ul class="article-list">
-                <!-- Article 1 (Latest - July 11) -->
-                <li>
-                    <a href="articles/enterprise-ai-hypothesis.html">The Enterprise AI Hypothesis: What if Business Processes Become the Primary Artifact?</a>
-                    <span class="article-date">Published: July 11, 2026</span>
-                </li>
+        <!-- Card Link 1 (Latest - July 11) -->
+        <a href="articles/enterprise-ai-hypothesis.html" class="article-card">
+            <h2>The Enterprise AI Hypothesis: What if Business Processes Become the Primary Artifact?</h2>
+            <p>A deep dive exploring why enterprise generative AI frameworks should prioritize explicit organizational business processes over standard raw database tables, APIs, or semantic layers.</p>
+            <span class="article-date">July 11, 2026</span>
+        </a>
 
-                <!-- Article 2 (July 4) -->
-                <li>
-                    <a href="articles/conformed-dimensions.html">Conformed Dimensions: Why They Matter More in an AI-first Enterprise</a>
-                    <span class="article-date">Published: July 4, 2026</span>
-                </li>
-            </ul>
-        </section>
+        <!-- Card Link 2 (July 4) -->
+        <a href="articles/conformed-dimensions.html" class="article-card">
+            <h2>Conformed Dimensions: Why They Matter More in an AI-first Enterprise</h2>
+            <p>Analyzing the modern architectural impact of Ralph Kimball's classic EDW Bus Matrix framework as the indispensable grounding baseline to eliminate structural hallucinations in multi-agent networks.</p>
+            <span class="article-date">July 4, 2026</span>
+        </a>
     </main>
 
     <!-- Synced Site Footer -->
@@ -78,3 +101,5 @@
 
 </body>
 </html>
+
+```

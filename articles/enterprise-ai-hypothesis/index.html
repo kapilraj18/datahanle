@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Enterprise AI Hypothesis</title>
+    <title>The Enterprise AI Hypothesis - DataHandle</title>
+    <link rel="stylesheet" href="assets/styles.css">
     <style>
+        /* Article specific layout refinements that extend your base layout */
         :root {
             --bg-color: #f8fafc;
             --text-color: #334155;
@@ -14,87 +16,30 @@
             --border-color: #e2e8f0;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        .wrap {
+        .article-container {
             max-width: 1100px;
-            margin: 0 auto;
+            margin: 2rem auto;
             padding: 0 2rem;
-        }
-
-        .hero {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin: 0 0 0.5rem 0;
-            font-weight: 800;
-        }
-
-        .hero h2 {
-            font-size: 1.4rem;
-            color: #94a3b8;
-            font-weight: 400;
-            margin: 0 0 1.5rem 0;
-        }
-
-        .lead {
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
-            color: #cbd5e1;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background 0.2s ease;
-        }
-
-        .btn:hover {
-            background-color: #1d4ed8;
-        }
-
-        .layout {
             display: grid;
             grid-template-columns: 240px 1fr;
             gap: 3rem;
-            max-width: 1100px;
-            margin: 3rem auto;
-            padding: 0 2rem;
         }
 
-        nav {
+        .article-nav {
             position: sticky;
             top: 2rem;
             height: fit-content;
         }
 
-        nav h3 {
-            font-size: 0.9rem;
+        .article-nav h3 {
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: #64748b;
             margin-bottom: 1rem;
         }
 
-        nav a {
+        .article-nav a {
             display: block;
             color: var(--text-color);
             text-decoration: none;
@@ -103,13 +48,21 @@
             transition: color 0.2s;
         }
 
-        nav a:hover {
+        .article-nav a:hover {
             color: var(--accent-color);
         }
 
-        main {
-            min-width: 0;
+        .hero-banner {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
         }
+
+        .hero-banner h1 { margin: 0 0 0.5rem 0; font-size: 2.25rem; }
+        .hero-banner h2 { margin: 0 0 1rem 0; font-size: 1.35rem; color: #94a3b8; font-weight: 400; }
+        .hero-banner p { margin: 0; color: #cbd5e1; }
 
         section {
             margin-bottom: 3.5rem;
@@ -117,14 +70,14 @@
         }
 
         h2 {
-            font-size: 1.75rem;
+            font-size: 1.6rem;
             color: var(--primary-color);
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 0.5rem;
             margin-top: 0;
         }
 
-        .card {
+        .concept-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
@@ -133,32 +86,6 @@
             gap: 2rem;
             padding: 2rem;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-        }
-
-        .card h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-            font-size: 1.2rem;
-        }
-
-        .card h4 {
-            color: #475569;
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
-        }
-
-        ul, ol {
-            padding-left: 1.25rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px solid var(--border-color);
-            margin: 1.5rem 0;
         }
 
         .badge-plugin {
@@ -181,109 +108,87 @@
             font-weight: 600;
         }
 
+        footer {
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            padding-bottom: 2rem;
+        }
+
         @media (max-width: 768px) {
-            .layout {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            nav {
-                display: none;
-            }
-            .card {
-                grid-template-columns: 1fr;
-            }
+            .article-container { grid-template-columns: 1fr; gap: 1.5rem; }
+            .article-nav { display: none; }
+            .concept-card { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-<header class="hero">
-    <div class="wrap">
-        <h1>The Enterprise AI Hypothesis</h1>
-        <h2>What if Business Processes Become the Primary Artifact?</h2>
-        <p class="lead">A hypothesis that AI should begin with business processes—not tables, APIs or semantic models.</p>
-        <a class="btn" href="#article">Read the hypothesis</a>
-    </div>
-</header>
-
-<div class="layout">
     <nav>
-        <h3>Contents</h3>
-        <a href="#problem">Problem</a>
-        <a href="#hypothesis">Hypothesis</a>
-        <a href="#concept">Concept</a>
-        <a href="#questions">Questions</a>
+        <a href='index.html'>Home</a>
+        <a href='articles.html'>Articles</a>
+        <a href='topics.html'>Topics</a>
+        <a href='point-of-view.html'>A Point of View</a>
     </nav>
 
-    <main id="article">
-        <section id="problem">
-            <h2>The Problem</h2>
-            <p>Enterprise AI has access to data but often lacks business context. Knowledge is scattered across documentation, APIs, semantic models and prompts.</p>
-        </section>
+    <div class="article-container">
+        <aside class="article-nav">
+            <h3>Contents</h3>
+            <a href="#problem">The Problem</a>
+            <a href="#hypothesis">The Hypothesis</a>
+            <a href="#concept">Concept Illustration</a>
+            <a href="#questions">Questions</a>
+        </aside>
 
-        <section id="hypothesis">
-            <h2>The Hypothesis</h2>
-            <p><strong>Business processes may become the primary artifact for enterprise AI.</strong> Humans describe intent, process, business concepts, governance and systems. AI consumes that context to orchestrate work.</p>
-        </section>
+        <main id="article">
+            <header class="hero-banner">
+                <h1>The Enterprise AI Hypothesis</h1>
+                <h2>What if Business Processes Become the Primary Artifact?</h2>
+                <p>A hypothesis that AI should begin with business processes—not tables, APIs or semantic models.</p>
+            </header>
 
-        <section id="concept">
-            <h2>Concept Illustration</h2>
-            <div class="card">
-                <div class="left">
-                    <h3>Enterprise Business Processes (MCP Plugins)</h3>
-                    <ul>
-                        <li>Lead to Opportunity <span class="badge-plugin">Plugin</span></li>
-                        <li>Opportunity to Quote <span class="badge-plugin">Plugin</span></li>
-                        <li>Quote to Order <span class="badge-plugin">Plugin</span></li>
-                        <li>Order to Cash <span class="badge-plugin">Plugin</span></li>
-                        <li>Customer Onboarding <span class="badge-plugin">Plugin</span></li>
-                        <li><strong>Customer Renewal <span class="badge-plugin">Plugin</span> ✓</strong></li>
-                        <li>Case to Resolution <span class="badge-plugin">Plugin</span></li>
-                        <li>Record to Report <span class="badge-plugin">Plugin</span></li>
-                        <li>Hire to Retire <span class="badge-plugin">Plugin</span></li>
-                    </ul>
-                    <hr>
-                    <h3>Selected Process: Customer Renewal</h3>
-                    <p><b>Business Outcome:</b> Renew an existing customer contract while maximizing customer value.</p>
+            <section id="problem">
+                <h2>The Problem</h2>
+                <p>Enterprise AI has access to data but often lacks business context. Knowledge is scattered across documentation, APIs, semantic models and prompts.</p>
+            </section>
+
+            <section id="hypothesis">
+                <h2>The Hypothesis</h2>
+                <p><strong>Business processes may become the primary artifact for enterprise AI.</strong> Humans describe intent, process, business concepts, governance and systems. AI consumes that context to orchestrate work.</p>
+            </section>
+
+            <section id="concept">
+                <h2>Concept Illustration</h2>
+                <div class="concept-card">
+                    <div class="left">
+                        <h3>Enterprise Business Processes (MCP Plugins)</h3>
+                        <ul>
+                            <li>Lead to Opportunity <span class="badge-plugin">Plugin</span></li>
+                            <li>Opportunity to Quote <span class="badge-plugin">Plugin</span></li>
+                            <li>Quote to Order <span class="badge-plugin">Plugin</span></li>
+                            <li>Order to Cash <span class="badge-plugin">Plugin</span></li>
+                            <li>Customer Onboarding <span class="badge-plugin">Plugin</span></li>
+                            <li><strong>Customer Renewal <span class="badge-plugin">Plugin</span> ✓</strong></li>
+                            <li>Case to Resolution <span class="badge-plugin">Plugin</span></li>
+                            <li>Record to Report <span class="badge-plugin">Plugin</span></li>
+                            <li>Hire to Retire <span class="badge-plugin">Plugin</span></li>
+                        </ul>
+                        <hr>
+                        <h3>Selected Process: Customer Renewal</h3>
+                        <p><b>Business Outcome:</b> Renew an existing customer contract while maximizing customer value.</p>
+                        
+                        <h4>Business Process Flow (Orchestrating MCP Skills)</h4>
+                        <ol>
+                            <li><strong>Prepare Client Meeting</strong> <span class="badge-skill">Sub-Process / Skill: Client Meeting Brief</span></li>
+                            <li><strong>Review Customer Health</strong> <span class="badge-skill">Sub-Process / Skill: Customer Health Summary</span></li>
+                            <li><strong>Identify Expansion Opportunities</strong></li>
+                            <li><strong>Create Renewal Proposal</strong> <span class="badge-skill">Sub-Process / Skill: Renewal Proposal Generator</span></li>
+                            <li><strong>Executive Approval</strong></li>
+                            <li><strong>Close Renewal</strong></li>
+                        </ol>
+                    </div>
                     
-                    <h4>Business Process Flow (Orchestrating MCP Skills)</h4>
-                    <ol>
-                        <li><strong>Prepare Client Meeting</strong> <span class="badge-skill">Sub-Process / Skill: Client Meeting Brief</span></li>
-                        <li><strong>Review Customer Health</strong> <span class="badge-skill">Sub-Process / Skill: Customer Health Summary</span></li>
-                        <li><strong>Identify Expansion Opportunities</strong></li>
-                        <li><strong>Create Renewal Proposal</strong> <span class="badge-skill">Sub-Process / Skill: Renewal Proposal Generator</span></li>
-                        <li><strong>Executive Approval</strong></li>
-                        <li><strong>Close Renewal</strong></li>
-                    </ol>
-                </div>
-                
-                <div class="right">
-                    <h4>Enterprise Knowledge</h4>
-                    <p>Every business process contributes to the Enterprise Business Matrix.</p>
-                    <p>Shared business concepts connect processes across the organization.</p>
-                    <p>AI agents consume business context—not just data.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="questions">
-            <h2>Questions Worth Exploring</h2>
-            <ul>
-                <li>Can business processes become the primary AI artifact?</li>
-                <li>Can Enterprise Bus Matrices emerge from governed business processes?</li>
-                <li>Should business teams author enterprise context?</li>
-            </ul>
-        </section>
-
-        <section id="references">
-            <h2>References</h2>
-            <p>This article was inspired by Google's Open Knowledge Format (OKF).</p>
-            <p><a href="https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">
-                Google Cloud: How the Open Knowledge Format Can Improve Data Sharing
-            </a></p>
-        </section>
-    </main>
-</div>
-
-</body>
-</html>
+                    <div class="right">
+                        <h4>Enterprise Knowledge</h4>
+                        <p>Every business process contributes to the Enterprise Business Matrix.</p>
+                        <p>Shared business concepts connect processes across the organization.</p>

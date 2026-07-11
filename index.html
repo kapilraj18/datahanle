@@ -1,1 +1,130 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>DataHanle</title><link rel='stylesheet' href='assets/styles.css'></head><body><nav><a href='index.html'>Home</a><a href='articles.html'>Articles</a><a href='topics.html'>Topics</a><a href='point-of-view.html'>A Point of View</a></nav><h1>DataHanle</h1><h2>Observe. Understand. Decide.</h2><p>Perspectives on enterprise data, analytics engineering, dimensional modeling, AI and decision intelligence.</p><div class='card'><h3>Featured Article</h3><p><a href='articles/conformed-dimensions.html'>Conformed Dimensions: Why They Matter More in an AI-first Enterprise</a></p></div><footer><b>DataHanle</b><br>Observe. Understand. Decide.</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DataHanle - Observe. Understand. Decide.</title>
+    <!-- Links to your main shared brand stylesheet -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        /* Container layout optimized for a single-page home feed */
+        .home-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero presentation statement */
+        .hero-section {
+            margin-bottom: 3.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 2.5rem;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        /* Section header for the stream */
+        .feed-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        /* The Card Link Component */
+        .article-card {
+            display: block;
+            text-decoration: none;
+            color: #0f172a;
+            background: #ffffff;
+            border: 1px solid #e2e8f0; /* Soft border framework */
+            border-radius: 16px;        /* Smooth rounded corners */
+            padding: 1.75rem;          /* Generous internal spacing */
+            margin-bottom: 1.5rem;     /* Space between individual cards */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Interactive states when a reader hovers over a card */
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-color: #cbd5e1;
+        }
+
+        /* Title style inside the card */
+        .article-card h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin: 0 0 0.75rem 0;
+            line-height: 1.3;
+            color: #0f172a;
+        }
+
+        /* Muted summary text */
+        .article-card p {
+            font-size: 0.95rem;
+            color: #475569;
+            margin: 0 0 1.25rem 0;
+            line-height: 1.6;
+        }
+
+        /* Light grey date marker at the bottom */
+        .article-card .article-date {
+            display: block;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Synced Top Navigation Header (Root Level) -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="topics.html">Topics</a>
+        <a href="point-of-view.html">A Point of View</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="home-container">
+        
+        <!-- Brand Introduction / Manifest Banner -->
+        <section class="hero-section">
+            <h1>DataHanle</h1>
+            <p>Architecting the modern semantic layer. Perspectives on data infrastructure, fabric patterns, and the integration of deterministic enterprise knowledge models into autonomous AI frameworks.</p>
+        </section>
+
+        <!-- Dynamic Latest Writing Stream -->
+        <section>
+            <h2 class="feed-title">Latest Writing</h2>
+
+            <!-- Card Link 1 (July 11) -->
+            <a href="articles/enterprise-ai-hypothesis.html" class="article-card">
+                <h2>The Enterprise AI Hypothesis: What if Business Processes Become the Primary Artifact?</h2>
+                <p>A deep dive exploring why enterprise generative AI frameworks should prioritize explicit organizational business processes over standard raw database tables, APIs, or semantic layers.</p>
+                <span class="article-date">July 11, 2026</span>
+            </a>
+
+            <!-- Card Link 2 (July 4) -->
+            <a href="articles/conformed-dimensions.html" class="article-card">
+                <h2>Conformed Dimensions: Why They Matter More in an AI-first Enterprise</h2>
+                <p>Analyzing the modern architectural impact of Ralph Kimball's classic EDW Bus Matrix framework as the indispensable grounding baseline to eliminate structural hallucinations in multi-agent networks.</p>
+                <span class="article-date">July 4, 2026</span>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Synced Site Footer -->
+    <footer>
+        <b>DataHanle</b><br>
+        Observe. Understand. Decide.
+    </footer>
+
+</body>
+</html>

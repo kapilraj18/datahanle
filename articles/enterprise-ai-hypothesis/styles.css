@@ -1,0 +1,15 @@
+
+body{margin:0;font-family:Inter,Arial,sans-serif;background:#f6f7fb;color:#1f2937;line-height:1.7}
+.hero{background:linear-gradient(135deg,#111827,#2563eb);color:#fff;padding:90px 20px}
+.wrap{max-width:1000px;margin:auto}
+.eyebrow{letter-spacing:.15em;font-size:.8rem;opacity:.8}
+h1{font-size:3.2rem;margin:.2em 0}
+.lead{max-width:700px;font-size:1.2rem}
+.btn{display:inline-block;background:#fff;color:#111;padding:12px 18px;border-radius:10px;text-decoration:none}
+.layout{display:grid;grid-template-columns:220px 1fr;max-width:1200px;margin:40px auto;gap:30px;padding:0 20px}
+nav{position:sticky;top:20px;height:max-content;background:#fff;padding:20px;border-radius:16px}
+nav a{display:block;margin:8px 0;color:#2563eb;text-decoration:none}
+section{background:#fff;padding:28px;border-radius:18px;margin-bottom:22px}
+.card{display:grid;grid-template-columns:2fr 1fr;gap:20px;border:1px solid #e5e7eb;border-radius:16px;padding:20px}
+.tags span{display:inline-block;background:#eef4ff;color:#1d4ed8;padding:6px 12px;border-radius:999px;margin:5px}
+@media(max-width:800px){.layout,.card{grid-template-columns:1fr}nav{position:static}}

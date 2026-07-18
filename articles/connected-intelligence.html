@@ -111,6 +111,92 @@
         .cta p {
             color: #ddd;
         }
+.learning-loop{
+    position:relative;
+    width:620px;
+    height:620px;
+    margin:60px auto;
+    border:2px solid #E5E5E5;
+    border-radius:50%;
+}
+
+.center-node{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:210px;
+    height:210px;
+    background:#111;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.center-node h3{
+    margin:0;
+    font-size:28px;
+}
+
+.center-node p{
+    margin-top:12px;
+    color:#d0d0d0;
+    font-size:14px;
+}
+
+.node{
+    position:absolute;
+    width:150px;
+    text-align:center;
+    line-height:1.4;
+}
+
+.node strong{
+    display:block;
+    margin-top:8px;
+}
+
+.people{top:-18px;left:50%;transform:translateX(-50%);}
+.decisions{top:120px;right:-30px;}
+.ai{bottom:120px;right:-30px;}
+.learning{bottom:-18px;left:50%;transform:translateX(-50%);}
+.skills{bottom:120px;left:-30px;}
+.process{top:120px;left:-30px;}
+
+@media(max-width:768px){
+
+.learning-loop{
+    width:340px;
+    height:340px;
+}
+
+.center-node{
+    width:150px;
+    height:150px;
+    font-size:12px;
+}
+
+.center-node h3{
+    font-size:20px;
+}
+
+.node{
+    width:90px;
+    font-size:12px;
+}
+
+.people{top:-10px;}
+.learning{bottom:-10px;}
+.process{left:-5px;top:60px;}
+.skills{left:-5px;bottom:60px;}
+.decisions{right:-5px;top:60px;}
+.ai{right:-5px;bottom:60px;}
         
         footer {
             text-align: left;
@@ -348,92 +434,6 @@
 
 
 }
-.learning-loop{
-    position:relative;
-    width:620px;
-    height:620px;
-    margin:60px auto;
-    border:2px solid #E5E5E5;
-    border-radius:50%;
-}
-
-.center-node{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:210px;
-    height:210px;
-    background:#111;
-    color:#fff;
-    border-radius:50%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-    box-sizing:border-box;
-}
-
-.center-node h3{
-    margin:0;
-    font-size:28px;
-}
-
-.center-node p{
-    margin-top:12px;
-    color:#d0d0d0;
-    font-size:14px;
-}
-
-.node{
-    position:absolute;
-    width:150px;
-    text-align:center;
-    line-height:1.4;
-}
-
-.node strong{
-    display:block;
-    margin-top:8px;
-}
-
-.people{top:-18px;left:50%;transform:translateX(-50%);}
-.decisions{top:120px;right:-30px;}
-.ai{bottom:120px;right:-30px;}
-.learning{bottom:-18px;left:50%;transform:translateX(-50%);}
-.skills{bottom:120px;left:-30px;}
-.process{top:120px;left:-30px;}
-
-@media(max-width:768px){
-
-.learning-loop{
-    width:340px;
-    height:340px;
-}
-
-.center-node{
-    width:150px;
-    height:150px;
-    font-size:12px;
-}
-
-.center-node h3{
-    font-size:20px;
-}
-
-.node{
-    width:90px;
-    font-size:12px;
-}
-
-.people{top:-10px;}
-.learning{bottom:-10px;}
-.process{left:-5px;top:60px;}
-.skills{left:-5px;bottom:60px;}
-.decisions{right:-5px;top:60px;}
-.ai{right:-5px;bottom:60px;}
     <footer>
         <b>DataHanle</b><br>
         Observe. Understand. Decide.

@@ -237,36 +237,51 @@
 
     <section>
 
-        <h2 class="title">
-            The Enterprise Learning Loop
-        </h2>
+    <h2 class="title">
+        The Enterprise Learning Loop
+    </h2>
 
-        <div class="loop">
+    <div class="learning-loop">
 
-            People<br>
-            ↓<br>
-
-            Processes<br>
-            ↓<br>
-
-            Institutional Knowledge<br>
-            ↓<br>
-
-            Connected Intelligence Skills & Plugins<br>
-            ↓<br>
-
-            Enterprise AI<br>
-            ↓<br>
-
-            Better Decisions<br>
-            ↓<br>
-
-            Enterprise Learns<br>
-            ↺
-
+        <div class="center-node">
+            <h3>📚</h3>
+            <strong>Institutional<br>Knowledge</strong>
+            <p>Connected Intelligence</p>
         </div>
 
-    </section>
+        <div class="node people">
+            👥
+            <strong>People</strong>
+        </div>
+
+        <div class="node decisions">
+            📈
+            <strong>Better Decisions</strong>
+        </div>
+
+        <div class="node ai">
+            🤖
+            <strong>Enterprise AI</strong>
+        </div>
+
+        <div class="node learning">
+            🏢
+            <strong>Enterprise Learns</strong>
+        </div>
+
+        <div class="node skills">
+            🧩
+            <strong>Connected Intelligence<br>Skills & Plugins</strong>
+        </div>
+
+        <div class="node process">
+            ⚙️
+            <strong>Processes</strong>
+        </div>
+
+    </div>
+
+</section>
 
     <section>
 
@@ -330,7 +345,94 @@
             A frontier without an ecosystem is not stable
         </a></p>
     </section>
+.learning-loop{
+    position:relative;
+    width:620px;
+    height:620px;
+    margin:60px auto;
+    border:2px solid #E5E5E5;
+    border-radius:50%;
+}
 
+.center-node{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:210px;
+    height:210px;
+    background:#111;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.center-node h3{
+    margin:0;
+    font-size:28px;
+}
+
+.center-node p{
+    margin-top:12px;
+    color:#d0d0d0;
+    font-size:14px;
+}
+
+.node{
+    position:absolute;
+    width:150px;
+    text-align:center;
+    line-height:1.4;
+}
+
+.node strong{
+    display:block;
+    margin-top:8px;
+}
+
+.people{top:-18px;left:50%;transform:translateX(-50%);}
+.decisions{top:120px;right:-30px;}
+.ai{bottom:120px;right:-30px;}
+.learning{bottom:-18px;left:50%;transform:translateX(-50%);}
+.skills{bottom:120px;left:-30px;}
+.process{top:120px;left:-30px;}
+
+@media(max-width:768px){
+
+.learning-loop{
+    width:340px;
+    height:340px;
+}
+
+.center-node{
+    width:150px;
+    height:150px;
+    font-size:12px;
+}
+
+.center-node h3{
+    font-size:20px;
+}
+
+.node{
+    width:90px;
+    font-size:12px;
+}
+
+.people{top:-10px;}
+.learning{bottom:-10px;}
+.process{left:-5px;top:60px;}
+.skills{left:-5px;bottom:60px;}
+.decisions{right:-5px;top:60px;}
+.ai{right:-5px;bottom:60px;}
+
+}
     <footer>
         <b>DataHanle</b><br>
         Observe. Understand. Decide.

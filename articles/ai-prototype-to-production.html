@@ -406,3 +406,199 @@ However, performance is often determined by <strong>how work is distributed</str
 </p>
 
 </section>
+<section id="three-ways">
+
+<h3>Three Ways To Build The Same Experience</h3>
+
+<h4>Approach 1: Sequential Thinking</h4>
+
+<pre>
+1    Load Customer
+          ↓
+2    Load Revenue
+          ↓
+3    Load Pipeline
+          ↓
+4    Load Support
+          ↓
+5    Load Customer Feedback
+</pre>
+
+<p><strong>Advantages:</strong></p>
+
+<ul>
+<li>Easy to understand</li>
+<li>Easy to develop</li>
+</ul>
+
+<p><strong>Disadvantages:</strong></p>
+
+<ul>
+<li>Every step waits for the previous one.</li>
+<li>Users experience cumulative delays.</li>
+</ul>
+
+<h4>Approach 2: Power BI Thinking</h4>
+
+<pre>
+Customer Summary     |||
+Revenue KPIs         |||
+Pipeline KPIs        |||
+Support KPIs         |||
+Customer Voice       |||
+</pre>
+
+<p>
+Everything begins simultaneously.
+</p>
+
+<p>
+The page completes when the slowest component finishes.
+</p>
+
+<p>
+This is one of the key reasons Power BI reports often feel surprisingly responsive.
+</p>
+
+<h4>Approach 3: Full Metric Parallelism</h4>
+
+<pre>
+Revenue KPI          |||
+Growth KPI           |||
+Pipeline KPI         |||
+Support KPI          |||
+Renewal KPI          |||
+Sentiment KPI        |||
+</pre>
+
+<p>
+Every KPI becomes an independent workload.
+</p>
+
+<p>
+This maximizes concurrency but also increases backend activity.
+</p>
+
+<p>
+The fastest technical architecture is not always the best business architecture.
+</p>
+
+</section>
+
+<section id="power-bi-cards">
+
+<h3>Why Power BI Cards Are One of the Most Underrated Performance Features</h3>
+
+<p>
+One of the most interesting lessons from this project was gaining a new appreciation for Power BI Cards.
+</p>
+
+<p>
+Most people think of a card as a simple KPI display.
+</p>
+
+<p>
+From a performance engineering perspective, it is much more than that.
+</p>
+
+<h4>A Card Represents an Independent Compute Unit</h4>
+
+<p>
+Consider the following metrics:
+</p>
+
+<table>
+
+<thead>
+<tr>
+<th>KPI</th>
+<th>Business Question</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Revenue</td>
+<td>How much revenue exists?</td>
+</tr>
+
+<tr>
+<td>Pipeline</td>
+<td>What opportunities are open?</td>
+</tr>
+
+<tr>
+<td>Support</td>
+<td>How healthy is customer support activity?</td>
+</tr>
+
+<tr>
+<td>Customer Health</td>
+<td>What is the overall relationship quality?</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+Each KPI can be calculated independently.
+</p>
+
+<p>
+That independence enables concurrency.
+</p>
+
+<h4>Why Parallel Cards Matter</h4>
+
+<p>
+Imagine four calculations that each require one second.
+</p>
+
+<table>
+
+<thead>
+<tr>
+<th>Design</th>
+<th>Total Wait Time</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Sequential Execution</td>
+<td>~4 seconds</td>
+</tr>
+
+<tr>
+<td>Parallel Execution</td>
+<td>~1 second</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+The amount of work is identical.
+</p>
+
+<p>
+The execution strategy is different.
+</p>
+
+<p>
+This is where Power BI quietly delivers value.
+</p>
+
+<p>
+A dashboard full of cards isn't just displaying information.
+</p>
+
+<p>
+It's encouraging an architecture built around independent, parallel computations.
+</p>
+
+</section>

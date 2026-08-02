@@ -602,3 +602,388 @@ It's encouraging an architecture built around independent, parallel computations
 </p>
 
 </section>
+<section id="generic-dax-patterns">
+
+<h3>Generic DAX Patterns: Correct vs Efficient</h3>
+
+<p>
+AI naturally generated patterns optimized for simplicity.
+</p>
+
+<h4>Combined Query Pattern</h4>
+
+<pre><code>EVALUATE
+SUMMARIZECOLUMNS(
+    "Metric A", [Metric A],
+    "Metric B", [Metric B],
+    "Metric C", [Metric C]
+)
+</code></pre>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Easy to generate</li>
+<li>Easy to understand</li>
+<li>Fewer requests</li>
+</ul>
+
+<p><strong>Limitations:</strong></p>
+
+<ul>
+<li>Larger execution scope</li>
+<li>Metrics become interdependent</li>
+<li>Harder to optimize individually</li>
+</ul>
+
+<h4>Independent KPI Pattern</h4>
+
+<pre><code>CALCULATE(
+    [Metric A],
+    CurrentBusinessContext
+)
+</code></pre>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+<li>Easier concurrency</li>
+<li>Independent execution</li>
+<li>Better troubleshooting</li>
+<li>Smaller workloads</li>
+<li>Greater flexibility</li>
+</ul>
+
+<p>
+The goal was not to rewrite business logic.
+</p>
+
+<p>
+The goal was to teach the application how to retrieve information more intelligently.
+</p>
+
+</section>
+
+<section id="performance-results">
+
+<h3>Performance Results</h3>
+
+<table>
+
+<thead>
+<tr>
+<th>Architecture</th>
+<th>Relative Response Time</th>
+<th>Relative Complexity</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Initial AI-generated version</td>
+<td>Baseline</td>
+<td>Low</td>
+</tr>
+
+<tr>
+<td>Optimized architecture</td>
+<td>~75% improvement</td>
+<td>Medium</td>
+</tr>
+
+<tr>
+<td>Full parallel experiment</td>
+<td>Similar user experience</td>
+<td>Higher</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+One of the most surprising findings was that the majority of performance gains came from:
+</p>
+
+<ul>
+<li>✅ Better filter propagation</li>
+<li>✅ Eliminating expensive lookups</li>
+<li>✅ Smarter query design</li>
+<li>✅ Shared context reuse</li>
+<li>✅ Parallel execution</li>
+</ul>
+
+<p>
+Not from additional computing power.
+</p>
+
+</section>
+
+<section id="hidden-cost">
+
+<h3>The Hidden Cost of Unlimited Parallelism</h3>
+
+<table>
+
+<thead>
+<tr>
+<th>Metric</th>
+<th>Optimized Design</th>
+<th>Full Parallel Design</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>User Experience</td>
+<td>Excellent</td>
+<td>Excellent</td>
+</tr>
+
+<tr>
+<td>Backend Requests</td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+
+<tr>
+<td>Operational Complexity</td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+
+<tr>
+<td>Scalability Risk</td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+
+<tr>
+<td>Production Recommendation</td>
+<td>✅ Preferred</td>
+<td>⚠ Use selectively</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+This was one of the biggest lessons from the exercise.
+</p>
+
+<p>
+The most parallel architecture wasn't dramatically faster.
+</p>
+
+<p>
+It simply consumed more resources.
+</p>
+
+<p>
+Good engineering is often about finding the right balance.
+</p>
+
+</section>
+
+<section id="engineering-added">
+
+<h3>What Engineering Added</h3>
+
+<p>
+Claude gave us the first draft.
+</p>
+
+<p>
+Engineering transformed it into a production-ready solution.
+</p>
+
+<p>
+The biggest improvements came from:
+</p>
+
+<ul>
+<li>Understanding query behavior</li>
+<li>Optimizing semantic model interactions</li>
+<li>Reducing unnecessary work</li>
+<li>Improving concurrency patterns</li>
+<li>Identifying bottlenecks through measurement</li>
+<li>Aligning application behavior with analytical workloads</li>
+</ul>
+
+<p>
+The code wasn't reinvented.
+</p>
+
+<p>
+The architecture matured.
+</p>
+
+</section>
+<section id="real-lesson">
+
+<h3>The Real Lesson for Fabric Developers</h3>
+
+<p>
+Microsoft Fabric gives developers tremendous flexibility.
+</p>
+
+<p>
+Rayfin extends that flexibility by allowing teams to build experiences that feel like modern applications rather than dashboards.
+</p>
+
+<p>
+But neither platform automatically solves performance.
+</p>
+
+<p>
+That's still the responsibility of developers.
+</p>
+
+<table>
+
+<thead>
+<tr>
+<th>AI Excels At</th>
+<th>Developers Must Own</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Rapid prototyping</td>
+<td>Query optimization</td>
+</tr>
+
+<tr>
+<td>UI generation</td>
+<td>Performance engineering</td>
+</tr>
+
+<tr>
+<td>Boilerplate code</td>
+<td>Scalability decisions</td>
+</tr>
+
+<tr>
+<td>Workflow creation</td>
+<td>Architectural tradeoffs</td>
+</tr>
+
+<tr>
+<td>Fast iteration</td>
+<td>Bottleneck analysis</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+AI generated the application.
+</p>
+
+<p>
+Microsoft Fabric provided the analytics foundation.
+</p>
+
+<p>
+Rayfin delivered the user experience.
+</p>
+
+<p>
+The engineering challenge was teaching the application how to use those capabilities efficiently.
+</p>
+
+</section>
+
+<section id="universal-principles">
+
+<h3>Beyond Microsoft Fabric: A Universal Engineering Lesson</h3>
+
+<p>
+Although this article uses Claude, Microsoft Fabric, and Rayfin as examples, the underlying engineering principles are universal.
+</p>
+
+<p>
+Whether an application is generated using ChatGPT, Claude, Cursor, Replit, GitHub Copilot, Gemini, or future AI-assisted development platforms, the same engineering challenges remain.
+</p>
+
+<p>
+Likewise, these principles are not limited to Microsoft Fabric, DAX, or Power BI semantic models. They apply equally to SQL, Spark, Python, C#, Java, JavaScript, REST APIs, and virtually every modern technology stack.
+</p>
+
+<p>
+AI can rapidly generate working software, but it cannot infer the performance characteristics of your production environment. Decisions around workload orchestration, query optimization, concurrency, caching, context propagation, scalability, and efficient resource utilization remain engineering responsibilities.
+</p>
+
+<p>
+The tools will continue to evolve.
+</p>
+
+<p>
+The engineering principles do not.
+</p>
+
+</section>
+
+<section id="final-thoughts">
+
+<h3>Final Thoughts</h3>
+
+<p>
+This project changed how I think about AI-generated software.
+</p>
+
+<p>
+The biggest breakthrough wasn't that Claude could build a working application.
+</p>
+
+<p>
+The breakthrough was realizing how much value comes after the code is generated.
+</p>
+
+<p>
+Rayfin and Microsoft Fabric make it possible to build experiences that go far beyond traditional BI.
+</p>
+
+<p>
+But unlike Power BI, they don't automatically make performance decisions on your behalf.
+</p>
+
+<p>
+They provide a blank canvas.
+</p>
+
+<p>
+And with a blank canvas comes responsibility.
+</p>
+
+<p>
+The future isn't AI replacing developers.
+</p>
+
+<p>
+The future is AI accelerating development while engineers focus on architecture, performance, scalability, and the countless engineering decisions that transform working software into production-ready systems.
+</p>
+
+<p>
+<strong>The technologies will evolve. Today's AI coding assistant may be replaced by another tomorrow, and today's programming language, query engine, or application framework may change. But the engineering principles of architecture, scalability, concurrency, and performance optimization remain timeless.</strong>
+</p>
+
+<p>
+<strong>AI created the first draft. Microsoft Fabric powered the data. Rayfin delivered the experience. Engineering transformed it into a system that could perform at enterprise scale. The same lesson applies regardless of which AI, framework, database, or programming language you use.</strong>
+</p>
+
+</section>
+
+<footer>
+    <b>DataHanle</b><br>
+    Observe. Understand. Decide.
+</footer>
+
+</body>
+</html>

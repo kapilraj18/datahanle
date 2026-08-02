@@ -196,3 +196,213 @@ The trade-off is important.
 <p>
 Power comes with responsibility.
 </p>
+<section id="powerbi-vs-rayfin">
+
+<h3>The Difference Between Power BI and Rayfin</h3>
+
+<p>
+Power BI is fundamentally a BI platform.
+</p>
+
+<p>
+Rayfin is fundamentally an application platform.
+</p>
+
+<p>
+That distinction changes everything.
+</p>
+
+<p>
+Power BI automatically handles many decisions most developers never think about:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Power BI Typically Handles</th>
+<th>Developers Rarely Worry About</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Visual-level execution</td>
+<td>Query orchestration</td>
+</tr>
+
+<tr>
+<td>Independent visual refresh</td>
+<td>Dependency management</td>
+</tr>
+
+<tr>
+<td>Parallel rendering</td>
+<td>Concurrency planning</td>
+</tr>
+
+<tr>
+<td>Semantic model optimization</td>
+<td>Request volume management</td>
+</tr>
+
+<tr>
+<td>Progressive visual loading</td>
+<td>Performance architecture</td>
+</tr>
+
+</tbody>
+</table>
+
+<p>
+When building applications with Rayfin, these decisions become the developer's responsibility.
+</p>
+
+<p>
+The platform gives you complete freedom.
+</p>
+
+<p>
+It also gives you complete ownership of performance.
+</p>
+
+</section>
+
+<section id="what-ai-got-right">
+
+<h3>What AI Got Right</h3>
+
+<p>
+Claude generated a surprisingly solid foundation.
+</p>
+
+<p>
+The initial solution included:
+</p>
+
+<ul>
+<li>Well-structured React components</li>
+<li>Data retrieval workflows</li>
+<li>Functional business logic</li>
+<li>End-to-end user journeys</li>
+<li>A cohesive application architecture</li>
+</ul>
+
+<p>
+The application worked.
+</p>
+
+<p>
+The user experience was good.
+</p>
+
+<p>
+The code was maintainable.
+</p>
+
+<p>
+Most importantly, stakeholders could immediately start providing feedback instead of waiting for months of development.
+</p>
+
+<p>
+This is where AI truly shines.
+</p>
+
+<p>
+It eliminates the blank-page problem.
+</p>
+
+</section>
+
+<section id="performance-illusion">
+
+<h3>The Performance Illusion</h3>
+
+<p>
+Many AI-generated applications share a similar characteristic:
+</p>
+
+<blockquote>
+They feel fast during development.
+</blockquote>
+
+<p>
+Why?
+</p>
+
+<p>
+Because development environments typically involve:
+</p>
+
+<ul>
+<li>A small dataset</li>
+<li>A handful of test users</li>
+<li>Warm caches</li>
+<li>Minimal concurrency</li>
+<li>Limited workload complexity</li>
+</ul>
+
+<p>
+Once an application reaches real-world usage, performance characteristics begin to change.
+</p>
+
+<p>
+The challenge is rarely correctness.
+</p>
+
+<p>
+The challenge is architecture.
+</p>
+
+</section>
+
+<section id="architecture-evolution">
+
+<h3>How the Architecture Evolved</h3>
+
+<table>
+
+<thead>
+<tr>
+<th>Version</th>
+<th>Query Strategy</th>
+<th>Approx. Queries</th>
+<th>Parallelism Level</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Claude Generated Prototype</td>
+<td>Large combined queries</td>
+<td>~7</td>
+<td>Page-level</td>
+</tr>
+
+<tr>
+<td>Optimized Production Design</td>
+<td>Smarter filtering + targeted queries</td>
+<td>~9</td>
+<td>Page-level + component-level</td>
+</tr>
+
+<tr>
+<td>Full Parallel Experiment</td>
+<td>Independent KPI execution</td>
+<td>~23</td>
+<td>Maximum parallelism</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+At first glance, increasing query count appears counterintuitive.
+</p>
+
+<p>
+However, performance is often determined by <strong>how work is distributed</strong>, not simply how many requests are executed.
+</p>
+
+</section>
